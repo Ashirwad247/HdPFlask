@@ -1,0 +1,710 @@
+/*---------------------------------------------------------------
+
+        Template Name: MedHC - Medical Health  Hospital
+        Description: Healthcare with our professional medical services
+        Author: Lucid Solutions
+        Author URL: https://www.templatemonster.com/store/lucid_solutions/
+        Version: 1.0.0
+
+    -----------------------------------------------------------------
+
+        CSS INDEX
+        ==================
+
+        1.   Header & Navbar Css
+        2.   Home Slider AreaCSS
+        3.   accreditation & about styles
+        4.   Our Specialist Area CSS
+        5.   Our Services Area CSS
+        6.   Our Doctors Area CSS
+        7.   Our Recent Work Area CSS
+        8.   Our Expertise Area CSS
+        9.   Our Latest Posts Area CSS
+        10.  Newsletter Area CSS
+        11.  Real Review Area CSS
+        12.  Footer Area CSS
+        13.  Back to top Styles
+
+----------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ==================
+   Basic Styles 
+================== */
+
+:root {
+
+  /* colors */
+
+  --PrimaryColor: #2e5192;
+  --SecondaryColor: #F4F7FE;
+  --SuccessColor: #04B962;
+  --LightColor: #5A5A5A;
+  --DarkColor: #070C1A;
+  --WhiteColor: #ffff;
+  --DangerColor: #c70000;
+  --WarningColor: #fdbb05;
+
+  /* font family */
+  --PrimaryFont: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--PrimaryFont);
+  word-break: break-word;
+  color: var(--DarkColor) !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--WhiteColor);
+}
+.main_outer{
+  overflow-x: hidden;
+}
+
+.fs-0 {
+  font-size: 0px;
+}
+
+.primary-btn {
+  background-color: var(--PrimaryColor) !important;
+  border-color: var(--PrimaryColor) !important;
+  color: var(--WhiteColor) !important;
+  /* display: inline-block; */
+  padding: 18px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.6s;
+  border-radius: 5px;
+}
+
+.primary-btn:hover {
+  background-color: #4e6fc3 !important;
+}
+
+.primary-outline-btn {
+  /* background-color: var(--PrimaryColor) !important; */
+  background-color: transparent !important;
+  color: var(--PrimaryColor) !important;
+  /* display: inline-block; */
+  padding: 18px 35px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: .6s;
+  border-radius: 5px;
+  /* margin-left: 20px; */
+  animation-delay: 2.5s;
+  border: 2px solid #4e6fc3 !important;
+}
+
+.primary-outline-btn:hover {
+  background-color: #4e6fc3 !important;
+  color: var(--WhiteColor) !important;
+}
+
+.text-dark {
+  color: var(--BlackColor) !important;
+}
+
+.text-light {
+  color: var(--LightColor) !important;
+}
+
+.text-warning {
+  color: var(--WarningColor) !important;
+}
+
+.text-gray {
+  color: var(--LightColor) !important;
+}
+
+.text-primary {
+  color: var(--PrimaryColor) !important;
+}
+
+.text-success {
+  color: var(--SuccessColor) !important;
+}
+
+.text-white {
+  color: var(--whiteColor);
+}
+
+.fs-7 {
+  font-size: 14px;
+}
+
+.bg-primary {
+  background-color: var(--PrimaryColor) !important;
+}
+
+.bg-secondary {
+  background-color: var(--SecondaryColor) !important;
+}
+
+.bg-success {
+  background-color: var(--SuccessColor) !important;
+}
+
+.bg-dark {
+  background-color: var(--DarkColor) !important;
+}
+
+.bg-light {
+  background-color: var(--SecondaryColor) !important;
+}
+
+.bg-white {
+  background-color: var(--WhiteColor);
+}
+
+.border-primary {
+  border-color: var(--PrimaryColor) !important;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: var(--LightColor);
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.pb-75 {
+  padding-bottom: 75px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--BlackColor) !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.sub-title {
+  display: inline-block;
+  color: var(--LightColor);
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--WhiteColor);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  border-radius: 50px;
+  animation-delay: 2.2s;
+}
+
+.error {
+  color: var(--DangerColor) !important;
+}
+
+/*================================================
+  Header & Navbar Css
+=================================================*/
+
+.top-header-optional li a {
+  width: 30px;
+  height: 30px;
+  transition: 0.2s ease-in-out;
+}
+
+.top-header-optional li a:hover {
+  color: var(--WhiteColor);
+  transform: translateY(-2px);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--PrimaryColor) !important;
+}
+
+/*================================================
+Home Slider AreaCSS
+=================================================*/
+
+.home-slides .owl-item {
+  width: 100%;
+}
+
+.main-slides-item.item-bg4 {
+  background-image: url(../../assets/img/slides-bg4.jpg);
+}
+
+.main-slides-item.item-bg5 {
+  background-image: url(../../assets/img/slides-bg5.png);
+}
+
+.main-slides-item.item-bg6 {
+  background-image: url(../../assets/img/slides-bg6.jpg);
+}
+
+.main-slides-item {
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-slides-content {
+  max-width: 650px;
+}
+
+/*================================================
+  accreditation & about styles
+=================================================*/
+
+#accreditation {
+  margin-top: -95px;
+  position: relative;
+  z-index: 99;
+}
+
+.about-content h3 {
+  font-size: 36px;
+  margin-top: 22px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.about-inner-box {
+  width: 450px;
+  max-width: 100%;
+}
+
+.about-content .about-list li i {
+  height: 25px;
+  width: 25px;
+  background-color: var(--PrimaryColor);
+}
+
+.about-content .img-circle {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--WhiteColor);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: 0.6s;
+}
+
+/*================================================
+Our Specialist Area CSS
+=================================================*/
+
+.section-title {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.single-features-box {
+  background-color: var(--WhiteColor);
+  box-shadow: 0px 15px 35px rgba(92, 126, 214, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  border-bottom: 1px solid var(--PrimaryColor);
+  /* margin-bottom: 30px; */
+  text-align: center;
+  transition: 0.6s;
+}
+
+.single-features-box .icon {
+  margin-bottom: 20px;
+}
+
+.single-features-box .icon {
+  height: 85px;
+  width: 85px;
+  background-color: var(--WhiteColor);
+  color: var(--PrimaryColor);
+  border-radius: 50%;
+  border: 1px dashed var(--PrimaryColor);
+  transition: 0.6s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-features-box:hover {
+  transform: translateY(-10px);
+}
+
+.single-features-box:hover .icon {
+  background-color: var(--SecondaryColor);
+  color: var(--whiteColor) !important;
+}
+
+/*================================================
+Our Services Area CSS
+=================================================*/
+
+.single-services-box:hover {
+  transform: translateY(-10px);
+}
+
+.single-services-box {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: var(--WhiteColor);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+
+.single-services-box .icon {
+  height: 80px;
+  width: 80px;
+  background-color: var(--PrimaryColor);
+  color: var(--whiteColor);
+  text-align: center;
+  border-radius: 15px;
+}
+
+
+/*================================================
+Our Doctors Area CSS
+=================================================*/
+.single-doctor {
+  margin-bottom: 30px;
+  transition: 0.6s;
+}
+
+.single-doctor img {
+  border-radius: 10px 10px 0 0;
+}
+
+.single-doctor .doctor-content {
+  text-align: center;
+  background-color: var(--WhiteColor);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 2px solid var(--PrimaryColor);
+}
+
+.doctor-item {
+  margin-bottom: 30px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 2px solid var(--PrimaryColor);
+}
+
+.single-doctor:hover {
+  transform: translateY(-10px);
+}
+
+@media(max-width:500px) {
+  .doctor-content h3 {
+    font-size: 16px !important;
+  }
+}
+
+
+/*================================================
+Our Recent Work Area CSS
+=================================================*/
+.single-gallery {
+  position: relative;
+  margin-bottom: 30px;
+  transition: 0.6s;
+}
+
+.single-gallery::before {
+  content: "";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+  width: 102%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transition: 0.6s;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.single-gallery img {
+  border-radius: 10px;
+}
+
+.single-gallery .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 30px;
+  transition: 0.6s;
+  z-index: 5;
+}
+
+.single-gallery:hover {
+  transform: translateY(-10px);
+}
+
+
+/*================================================
+Our Expertise Area CSS
+=================================================*/
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.quform-element label span.quform-required {
+  color: var(--DangerColor);
+  font-size: 10px;
+}
+
+.quform-input {
+  position: relative;
+}
+
+.quform-element>label {
+  font-weight: normal;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  color: var(--PrimaryColor);
+}
+
+.cust-form-control {
+  height: 50px;
+  border-radius: 3px;
+  font-size: 15px;
+  min-width: 300px;
+}
+
+.form-select {
+  height: 50px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+}
+
+/*================================================
+Our Latest Posts Area CSS
+=================================================*/
+.single-blog {
+  transition: 0.6s;
+}
+
+.single-blog .blog-image img {
+  border-radius: 10px 10px 0 0;
+}
+
+.single-blog .blog-content {
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+  border-bottom: 2px solid var(--PrimaryColor);
+}
+
+.single-blog:hover {
+  transform: translateY(-10px);
+}
+
+/*================================================
+Newsletter Area CSS
+=================================================*/
+.newsletter-wrap {
+  padding: 45px;
+  box-shadow: 0 0 20px 0 hsla(0, 0%, 87%, .671);
+  background-color: var(--PrimaryColor);
+  border-radius: 10px;
+}
+
+.newsletter-form {
+  position: relative;
+}
+
+.newsletter-form form,
+.newsletter-form input {
+  outline: 0px !important;
+}
+
+.cust-form-control {
+  height: 75px;
+  border-radius: 10px;
+  padding-left: 25px;
+  font-size: 18px;
+}
+
+.newsletter-btn {
+  height: 65px;
+  width: 250px;
+}
+
+/*================================================
+Real Review Area CSS
+=================================================*/
+
+.single-review-item {
+  padding: 55px 30px 35px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 35px;
+  transition: .6s;
+}
+
+.single-review-item .icon i {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
+  font-size: 30px;
+  border-radius: 50%;
+  transition: .6s;
+}
+
+.single-review-item .icon {
+  position: absolute;
+  top: -35px;
+  left: 30px;
+  z-index: 1;
+}
+
+.single-review-item .review-info {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 75px;
+}
+
+.single-review-item .review-info img {
+  display: inline-block;
+  height: 58px;
+  width: 58px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+#test-slider .review-slides{
+  display: flex;
+  justify-content: center;
+}
+#test-slider .owl-dots{
+  margin: 50px 0 0 0 !important;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 20px;
+  height: 20px;
+  transition: .6s;
+  border-radius: 50%;
+  position: relative;
+}
+
+.owl-theme .owl-dots .owl-dot.active span{
+  background: var(--PrimaryColor);
+}
+.owl-nav{
+  display:none;
+}
+
+
+/*================================================
+Footer Area CSS
+=================================================*/
+
+
+.single-footer-widget .footer-info img {
+  height: 55px;
+  width: 55px;
+}
+.single-footer-widget .footer-information li {
+ list-style: none;
+  position: relative;
+  text-align: left;
+  padding-left: 55px;
+}
+
+.single-footer-widget .footer-information li i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 38px;
+}
+
+.single-footer-widget .footer-information li span {
+  display: block;
+}
+
+/* ==================
+  Back to top Styles
+================== */
+
+#backtotop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#backtotop:hover {
+  cursor: pointer;
+}
+#backtotop.show {
+  opacity: 1;
+  visibility: visible;
+}
